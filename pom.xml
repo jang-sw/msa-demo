@@ -4,11 +4,25 @@
   <artifactId>msa-parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-
+	<properties>
+    	<maven.compiler.release>25</maven.compiler.release>
+	</properties>
 	<modules>
 	    <module>auth-server</module>
 	    <module>api-gateway</module>
 	    <module>order-service</module>
 	    <module>user-service</module>
 	</modules>
+	<dependencyManagement>
+		<dependencies>
+			<!-- Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies -->
+			<dependency>
+			    <groupId>org.springframework.boot</groupId>
+			    <artifactId>spring-boot-dependencies</artifactId>
+			    <version>4.1.1</version>
+			    <type>pom</type>
+			    <scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
